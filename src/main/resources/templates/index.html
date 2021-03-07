@@ -5,7 +5,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Spring Boot＋Thymeleaf で”Hello World”</h1>
-<h2><span th:text="${message}"></span></h2>
+    <table border="1">
+        <tr>
+            <th>名前</th>
+        </tr>
+         <tr th:each="info: ${okashi}">
+         <td th:text="${info.name}">
+         </td>
+         </tr>
+     </table>
+<h1>第4回課題</h1>
 </body>
 </html>
