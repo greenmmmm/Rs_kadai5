@@ -21,7 +21,6 @@ public class HelloController {
     public String index(Model model) {
     	List<Okashi> list = okashiMapper.selectAll();
     	model.addAttribute("okashi", list);
-    	//model.addAttribute("message", "Hello World!!");
         return "index";
     }
 }
