@@ -17,10 +17,16 @@ public class HelloController {
 	@Autowired
 	OkashiMapper okashiMapper;
 
+	//サーバーが受け付ける"URL"と"処理"を関連付ける(Mappingする)
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(Model model) {
+
+    	//リストに、マッパークラスで取得したDBのデータを入れる
     	List<Okashi> list = okashiMapper.selectAll();
+
+    	//addAttribute(キー名, 値);キー名を指定すると,画面が値を受け取ることができます。listの値を"okashi"という要素に入れる。
     	model.addAttribute("okashi", list);
+
         return "index";
     }
 }
