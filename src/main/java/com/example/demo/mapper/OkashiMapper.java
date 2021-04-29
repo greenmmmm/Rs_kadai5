@@ -10,5 +10,5 @@ import com.example.demo.domain.Okashi;
 @Mapper
 public interface OkashiMapper {
 	//全件取得。メソッド処理内容は、xmlファイルで記載
-	List<Okashi> selectAll();
+	public List<Okashi> selectAll();
 }
