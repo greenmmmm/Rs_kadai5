@@ -2,8 +2,12 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<!-- Mapper と xml の マッピング -->
 <mapper namespace="com.example.demo.mapper.OkashiMapper">
+
+<!-- ”selectAll” が呼ばれたとき、resulyTypeの型を返す-->
     <select id="selectAll" resultType="com.example.demo.domain.Okashi">
-        SELECT * FROM okashi
+        SELECT * FROM okashi_data
     </select>
 </mapper>
