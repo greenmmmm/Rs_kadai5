@@ -34,10 +34,11 @@ public class HelloController {
 
         return "index";
     }
-    
+
+    //登録ボタンを押すと、登録画面に移動
     @GetMapping("/register")
     public String registerUser(Model model, @ModelAttribute Okashi o) {
         model.addAttribute("okashi", o);
-        return "/";
+        return "register";
     }
 }
