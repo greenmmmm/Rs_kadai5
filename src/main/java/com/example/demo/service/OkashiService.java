@@ -10,12 +10,15 @@ import com.example.demo.mapper.OkashiMapper;
 
 @Service
 public class OkashiService {
-	
+
     @Autowired
     OkashiMapper mapper;
-    
+
     public List<Okashi> getList() {
         return mapper.selectAll();
     }
 
+    public void insertOne(Okashi o) {
+        mapper.insertOne(o);
+    }
 }

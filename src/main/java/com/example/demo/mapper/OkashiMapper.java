@@ -9,6 +9,12 @@ import com.example.demo.domain.Okashi;
 //MyBatisでリポジトリを作成する
 @Mapper
 public interface OkashiMapper {
-	//全件取得。メソッド処理内容は、xmlファイルで記載
+	//全件取得。メソッド処理内容は、Serviceクラス、SQLはxmlファイルで記載。
 	public List<Okashi> selectAll();
+
+	//登録。
+	public void insertOne(Okashi o);
+
 }
+
+
