@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -40,5 +41,11 @@ public class HelloController {
     public String registerUser(Model model, @ModelAttribute Okashi o) {
         model.addAttribute("okashi", o);
         return "register";
+    }
+    //新規作成ボタンを押すと、登録してトップページに戻る
+    @PostMapping("/register")
+    public String create(@ModelAttribute Okashi o) {
+        service.insertOne(o);
+        return "redirect:/";
     }
 }
