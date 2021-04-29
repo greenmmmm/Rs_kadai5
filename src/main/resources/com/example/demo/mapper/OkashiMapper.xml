@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-        
+
 <!-- Mapper と xml の マッピング -->
 <mapper namespace="com.example.demo.mapper.OkashiMapper">
 
@@ -10,4 +10,20 @@
     <select id="selectAll" resultType="com.example.demo.domain.Okashi">
         SELECT * FROM okashi_data
     </select>
+
+<!--登録-->
+      <insert id="insertOne">
+    insert into users (
+        id,
+        name,
+        kal
+    )
+    values (
+        #{id},
+        #{name},
+        #{kal}
+    )
+  </insert>
+
+
 </mapper>
