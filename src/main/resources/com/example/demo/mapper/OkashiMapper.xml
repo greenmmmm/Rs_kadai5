@@ -12,7 +12,7 @@
     </select>
 
 <!--登録-->
-      <insert id="insertOne">
+    <insert id="insertOne">
     insert into  okashi_data(
         id,
         name,
@@ -24,6 +24,14 @@
         #{kal}
     )
   </insert>
+
+  <!--変更-->
+    <update id="updateOne">
+    update  okashi_data
+    set     name = #{name},
+              kal = #{kal}
+    where   id = #{id}
+   </update>
 
 
 </mapper>
