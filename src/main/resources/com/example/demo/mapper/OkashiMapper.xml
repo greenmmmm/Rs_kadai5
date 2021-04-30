@@ -12,7 +12,7 @@
     </select>
 
 <!--1件取得-->
-  <select id="findOne" resultMap="user">
+  <select id="findOne" resultType="com.example.demo.domain.Okashi">
     select  *
     from    okashi_data
     where   id = #{id}
