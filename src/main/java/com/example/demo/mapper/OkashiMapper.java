@@ -15,6 +15,11 @@ public interface OkashiMapper {
 	//登録。
 	public void insertOne(Okashi o);
 
+	//変更
+    public void updateOne(String id, String name, int kal);
+
+
+
 }
 
 
