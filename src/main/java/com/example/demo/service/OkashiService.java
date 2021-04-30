@@ -21,4 +21,9 @@ public class OkashiService {
     public void insertOne(Okashi o) {
         mapper.insertOne(o);
     }
+
+    public void updateOne(String id, String name, int kal) {
+        mapper.updateOne(id, name, kal);
+    }
+
 }
