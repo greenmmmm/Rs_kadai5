@@ -11,6 +11,13 @@
         SELECT * FROM okashi_data
     </select>
 
+<!--1件取得-->
+  <select id="findOne" resultMap="user">
+    select  *
+    from    okashi_data
+    where   id = #{id}
+  </select>
+
 <!--登録-->
     <insert id="insertOne">
     insert into  okashi_data(
