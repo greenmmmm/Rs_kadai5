@@ -14,14 +14,22 @@ public class OkashiService {
     @Autowired
     OkashiMapper mapper;
 
+    //全件取得
     public List<Okashi> getList() {
         return mapper.selectAll();
     }
 
+    //1件取得
+    public Okashi getOne(String id) {
+        return mapper.findOne(id);
+    }
+
+    //登録
     public void insertOne(Okashi o) {
         mapper.insertOne(o);
     }
 
+    //変更
     public void updateOne(String id, String name, int kal) {
         mapper.updateOne(id, name, kal);
     }
