@@ -3,7 +3,7 @@ package com.example.demo.domain;
 public class Okashi {
 	private String id;
 	private String name;
-	private String kal;
+	private int kal;
 
 	public String getId() {
 		return id;
@@ -13,11 +13,11 @@ public class Okashi {
 		this.id = id;
 	}
 
-	public String getKal() {
+	public int getKal() {
 		return kal;
 	}
 
-	public void setKal(String kal) {
+	public void setKal(int kal) {
 		this.kal = kal;
 	}
 
