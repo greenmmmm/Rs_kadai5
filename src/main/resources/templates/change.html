@@ -9,9 +9,18 @@
      <h2>変更(change.html)</h2>
 
      <form method="post" th:action="@{/change/{id}}"  th:object="${okashi}">
-             <label>ID:<input type="text" th:field="*{id}"></label><br>
-             <label>名前:<input type="text" th:field="*{name}"></label><br>
-             <label>カロリー:<input type="text" th:field="*{kal}"></label><br>
+     <input type ="hidden" th:field ="*{id}"/>
+         <table>
+         <tr>
+                <th>ID:</th><td th:text="*{id}"></td>
+         </tr>
+         <tr>
+                <th>名前:</th><td><input type="text" th:field="*{name}"/></td>
+         </tr>
+         <tr>
+                <th>カロリー:</th><td><input type="text" th:field="*{kal}"/></td>
+         </tr>
+         </table>
 
              <button name="update">変更</button>
     </form>
