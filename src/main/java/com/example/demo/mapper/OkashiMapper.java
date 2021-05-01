@@ -3,6 +3,7 @@ package com.example.demo.mapper;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import com.example.demo.domain.Okashi;
 
@@ -20,9 +21,7 @@ public interface OkashiMapper {
 	public void insertOne(Okashi o);
 
 	//変更。
-    public void updateOne(String id, String name, int kal);
-
-
+    public void updateOne(@Param("id") String id, @Param("name") String name, @Param("kal") int kal);
 
 }
 

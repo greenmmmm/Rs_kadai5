@@ -51,9 +51,18 @@ public class HelloController {
     }
 
     //変更ボタンを押すと、変更画面に移動
-    @GetMapping("change/{id}")
+    @GetMapping("/change/{id}")
     public String change(@PathVariable("id") String id, Model model) {
         model.addAttribute("okashi", service.getOne(id));
         return "change";
     }
+    //変更内容を保存してトップページに戻る
+    @PostMapping(value="/change/{id}", params="update")
+    public String update(@ModelAttribute Okashi o, Model model) {
+        service.updateOne(o.getId(), o.getName(), o.getKal());
+        return "redirect:/";
+    }
+
+
+
 }
