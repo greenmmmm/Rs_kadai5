@@ -6,13 +6,19 @@
 <!-- Mapper と xml の マッピング -->
 <mapper namespace="com.example.demo.mapper.OkashiMapper">
 
+<resultMap type="com.example.demo.domain.Okashi" id="oks">
+    <id column="id" property="id"/>
+    <result column="name" property="name"/>
+    <result column="kal" property="kal"/>
+</resultMap>
+
 <!-- ”selectAll” が呼ばれたとき、resulyTypeの型を返す-->
     <select id="selectAll" resultType="com.example.demo.domain.Okashi">
         SELECT * FROM okashi_data
     </select>
 
 <!--1件取得-->
-  <select id="findOne" resultType="com.example.demo.domain.Okashi">
+  <select id="findOne" resultMap="oks">
     select  *
     from    okashi_data
     where   id = #{id}

@@ -51,7 +51,7 @@ public class HelloController {
     }
 
     //変更ボタンを押すと、変更画面に移動
-    @GetMapping("change/id={id}")
+    @GetMapping("change/{id}")
     public String change(@PathVariable("id") String id, Model model) {
         model.addAttribute("okashi", service.getOne(id));
         return "change";
