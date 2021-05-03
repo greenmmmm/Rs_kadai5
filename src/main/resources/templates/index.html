@@ -11,6 +11,7 @@
             <th>名前</th>
             <th>カロリー</th>
             <th></th>
+            <th></th>
         </tr>
 
         <tr th:each="info: ${okashi}">
@@ -18,6 +19,7 @@
             <td th:text="${info.name}">
             <td th:text="${info.kal}">
             <td><a th:href="@{'/change/'+${info.id}}"><button>変更</button></a>
+            <td><a th:href="@{'/change/'+${info.id}}"><button>削除</button></a>
             </td>
          </tr>
      </table>
