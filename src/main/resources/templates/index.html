@@ -19,7 +19,7 @@
             <td th:text="${info.name}">
             <td th:text="${info.kal}">
             <td><a th:href="@{'/change/'+${info.id}}"><button>変更</button></a>
-            <td><a th:href="@{'/change/'+${info.id}}"><button>削除</button></a>
+            <td><form th:method="post" th:action="@{'/delete/'+${info.id}}"><button>削除</button></form>
             </td>
          </tr>
      </table>
