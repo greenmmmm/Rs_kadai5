@@ -63,6 +63,11 @@ public class HelloController {
         return "redirect:/";
     }
 
-
+    //削除ボタン押下
+    @PostMapping("/delete/{id}")
+    public String delete(@PathVariable String id, @ModelAttribute Okashi o) {
+        service.deleteOne(o);
+        return "redirect:/";
+    }
 
 }
