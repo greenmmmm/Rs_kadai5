@@ -23,6 +23,8 @@ public interface OkashiMapper {
 	//変更。
     public void updateOne(@Param("id") String id, @Param("name") String name, @Param("kal") int kal);
 
+    //削除。
+    public void deleteOne(Okashi o);
 }
 
 

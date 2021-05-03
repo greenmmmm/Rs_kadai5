@@ -34,4 +34,9 @@ public class OkashiService {
         mapper.updateOne(id, name, kal);
     }
 
+    //削除
+    public void deleteOne(Okashi o) {
+        mapper.deleteOne(o);
+    }
+
 }
