@@ -46,5 +46,12 @@
     where   id = #{id}
    </update>
 
+  <delete id="deleteOne">
+        delete from
+        okashi_data
+    where
+        id = #{id}
+  </delete>
+
 
 </mapper>
